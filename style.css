@@ -1,0 +1,185 @@
+/* VARIÁVEIS */
+:root {
+  --azul: #00A8C6;
+  --laranja: #F15A29;
+  --preto: #000000;
+  --cinza: #4D4D4D;
+  --branco: #FFFFFF;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: var(--branco);
+  color: var(--cinza);
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  border-bottom: 2px solid var(--azul);
+}
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+header nav a {
+  margin: 10px;
+  text-decoration: none;
+  color: var(--azul);
+  font-weight: 500;
+}
+header nav a:hover {
+  color: var(--laranja) !important;
+}
+
+/* SEÇÕES */
+section {
+  padding: 60px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 30px;
+}
+section.gray {
+  background: #f3f3f3;
+  border-top: 2px solid var(--azul);
+  border-bottom: 2px solid var(--azul);
+}
+section .text {
+  max-width: 50%;
+}
+section h2 {
+  color: var(--laranja);
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+section p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: var(--azul);
+}
+
+/* BOTÕES */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid var(--laranja);
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: var(--laranja);
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+}
+.btn:hover {
+  background: var(--laranja);
+  color: var(--branco);
+}
+
+/* LISTA COM ÍCONES */
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul li {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+ul li p {
+  padding-left: 3%;
+}
+
+/* REDES SOCIAIS */
+.social {
+  text-align: center;
+  margin: 30px 0;
+}
+.social h3 {
+  color: var(--laranja);
+  margin-bottom: 10px;
+}
+.social a {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  color: var(--azul);
+  transition: 0.3s;
+}
+.social a:hover {
+  color: var(--laranja);
+}
+
+/* MAPA */
+.mapa {
+  padding: 40px 20px;
+}
+.mapa h3 {
+  color: var(--laranja);
+  margin-bottom: 10px;
+}
+.mapa p {
+  margin-bottom: 20px;
+}
+iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+}
+
+/* ======================= */
+/* RESPONSIVIDADE MOBILE   */
+/* ======================= */
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  section .text {
+    max-width: 100%;
+  }
+  section .img {
+    margin-top: 20px;
+  }
+  header {
+    padding: 20px;
+  }
+  header nav a {
+    margin: 5px 10px;
+    font-size: 0.95rem;
+  }
+  .btn {
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 30px 15px;
+  }
+  section h2 {
+    font-size: 1.3rem;
+  }
+  section p {
+    font-size: 0.9rem;
+  }
+  ul li {
+    flex-direction: column;
+    text-align: center;
+  }
+  ul li img {
+    margin-bottom: 8px;
+    max-width: 40px;
+  }
+  header nav {
+    flex-direction: column;
+  }
+}
